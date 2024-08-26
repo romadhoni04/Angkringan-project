@@ -96,8 +96,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu Angrkingan</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="menu.php">Menu Angrkingan</a></li>
           </ol>
         </div>
       </nav>

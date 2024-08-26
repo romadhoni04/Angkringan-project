@@ -109,9 +109,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          !-- <img src="assets/img/logo.png" alt="">
-          <-->
-            <!-- <h2>Angkringan-O</h2> -->
+          <img src="assets/img/logo.png" alt="">
+
+          <!-- <h2>Angkringan-O</h2> -->
         </div>
 
         <div class="row gy-4">

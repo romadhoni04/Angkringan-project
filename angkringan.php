@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +53,7 @@
       </div>
     </div>
   </section><!-- End Top Bar -->
-
+   
   <header id="header" class="header d-flex align-items-center">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -97,7 +96,7 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li>Angkringan</li>
           </ol>
         </div>
@@ -110,45 +109,45 @@
 
         <div class="row gy-4 posts-list">
 
+        
+          <?php
+          include "koneksi.php";
+               // $query_lihat_menu = "select * from tb_dataangkringan";
+                //$sql_lihat_menu = mysqli_query($conn, $query_lihat_menu);
+             $query = "select * from tb_gambar join tb_dataangkringan on tb_dataangkringan.kode = tb_gambar.kode";
+             // SQL query to fetch all table data
+            $view_produk = mysqli_query($conn,$query); // sending the query to the database
+            // displaying all the data retrieved from the database using while loop
+            while ($row = mysqli_fetch_assoc($view_produk)) {
+            $kode = $row['kode'];
+            $namaangkringan = $row['namaangkringan'];
+            $nama = $row['nama'];
+            $nomor = $row['nomor'];
+            $alamat = $row['alamat'];
+            $deskripsi = $row['deskripsi'];
+            $gambar = $row['gambar'];
+            ?>
+
+           
           <div class="col-xl-4 col-md-6">
             <article>
 
               <div class="post-img">
-                <img src="assets/img/putramelati.png" alt="" class="img-fluid">
+                
+               <img src="admin/gambar/<?php echo $gambar?>" alt="" class="img-fluid">
+
               </div>
+             
+               
 
-              <p class="post-category">Desa pelem kerep</p>
-
+              <p class="post-category"></p>
+              
               <h2 class="title">
-                <a href="portfolio-details.html">Angkringan Putra Melati</a>
+                <a href="data_angkringan.php?kode=<?php echo $row['kode'] ?>"><?php echo $namaangkringan?></a>
+ 
               </h2>
-
-              <div class="d-flex align-items-center">
-                <img src="assets/img/blog/admin.png" alt="" class="img-fluid post-author-img flex-shrink-0">
-                <div class="post-meta">
-                  <p class="post-author-list">Administrator</p>
-                  <p class="post-date">
-                    <time datetime="2022-01-01">12 Oktober 2022</time>
-                  </p>
-                </div>
-              </div>
-
-            </article>
-          </div><!-- End post list item -->
-
-          <div class="col-xl-4 col-md-6">
-            <article>
-
-              <div class="post-img">
-                <img src="assets/img/isco-01.png" alt="" class="img-fluid">
-              </div>
-
-              <p class="post-category">Desa Singorojo</p>
-
-              <h2 class="title">
-                <a href="portfolio-details1.html">Angkringan Hendra Isco</a>
-              </h2>
-
+              
+              
               <div class="d-flex align-items-center">
                 <img src="assets/img/blog/admin.png" alt="" class="img-fluid post-author-img flex-shrink-0">
                 <div class="post-meta">
@@ -157,13 +156,21 @@
                     <time datetime="2022-01-01">5 November 2022</time>
                   </p>
                 </div>
+  
               </div>
-
+ 
             </article>
           </div><!-- End post list item -->
+ 
+            <?php
+           
 
+          }
+              
+                //echo $uang;
+              ?>
         </div><!-- End blog posts list -->
-
+ 
         <div class="blog-pagination">
           <ul class="justify-content-center">
             <li class="active"><a href="#">1</a></li>
@@ -199,7 +206,7 @@
           <h4>Tautan</h4>
           <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="angkringan.php">Angkringan</a></li>
+            <li><a href="portofolio.php">Angkringan</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="profil.php">Profil</a></li>
             <li><a href="kontak.php">Kontak</a></li>

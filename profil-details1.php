@@ -97,8 +97,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Profil Details</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="profil.php">Profil Details</a></li>
           </ol>
         </div>
       </nav>
@@ -122,8 +122,8 @@
 
               <div class="meta-top">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">Administrator</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">9 November 2022</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.php">Administrator</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.php"><time datetime="2020-01-01">9 November 2022</time></a></li>
                 </ul>
               </div><!-- End meta top -->
 
@@ -180,7 +180,7 @@
                   <div class="post-item mt-3">
                     <img src="assets/img/team/team-2.jpg" alt="">
                     <div>
-                      <h4><a href="profil-details2.html">Fahri Rahmat Wahyudin</a></h4>
+                      <h4><a href="profil-details2.php">Fahri Rahmat Wahyudin</a></h4>
                       <time datetime="2022-11-10">10 November 2022</time>
                     </div>
                   </div><!-- End recent post item-->
@@ -188,7 +188,7 @@
                   <div class="post-item">
                     <img src="assets/img/team/team-1.jpg" alt="">
                     <div>
-                      <h4><a href="profil-details1.html">Roma Dhoni</a></h4>
+                      <h4><a href="profil-details1.php">Roma Dhoni</a></h4>
                       <time datetime="2022-11-11">11 November 2022</time>
                     </div>
                   </div><!-- End recent post item-->

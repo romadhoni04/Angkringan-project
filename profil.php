@@ -97,8 +97,8 @@
       <nav>
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Profil</li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="profil.php">Profil</a></li>
           </ol>
         </div>
       </nav>
@@ -119,7 +119,7 @@
             <div class="member">
               <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
               <h4 class="title">
-                <a href="profil-details.html">Roma Dhoni</a>
+                <a href="profil-details.php">Roma Dhoni</a>
               </h4>
               <span>Web Development</span>
               <div class="social">
@@ -135,7 +135,7 @@
             <div class="member">
               <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
               <h4 class="title">
-                <a href="profil-details2.html">Fahri Rahmat Wahyudin</a>
+                <a href="profil-details2.php">Fahri Rahmat Wahyudin</a>
               </h4>
               <span>Web Development</span>
               <div class="social">
@@ -151,7 +151,7 @@
             <div class="member">
               <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
               <h4 class="title">
-                <a href="profil-details1.html">Deva Arya Saputra</a>
+                <a href="profil-details1.php">Deva Arya Saputra</a>
               </h4>
               <span>Web Development</span>
               <div class="social">

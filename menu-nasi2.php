@@ -83,81 +83,85 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="page-header d-flex align-items-center" style="background-image: url('');">
-        <div class="container position-relative">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2>Daftar Menu Angkringan</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav>
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu Angrkingan</a></li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Breadcrumbs -->
-
-    <section class="sample-page">
-      <div class="container" data-aos="fade-up">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-
-          <body>
-
-            <div class="container">
+   <section id="blog" class="blog">
+     <div class="container">
               <div class="row justify-content-center">
-                <div class="col-md-6 text-center mb-12">
-                  <h2 class="heading-section">Berbagai Macam Nasi</h2>
+                <div class="col-md-4 text-center mb-12">
+                  <h2 class="heading-section">Berbagai Macam Menu</h2>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12">
+              <br>
+      <div class="container" data-aos="fade-up">
 
-                  <div class="table-wrap">
-                    <table class="table table-bordered text-center">
-                      <tbody>
-                        <tr>
-                          <td class="text-center">
-                            <div class="img thumbnail mb-2" style="background-image: url(assets/img/menu/nasi-teri-2.png);"></div>
-                            <a href="#"><strong>Nasi Teri</strong> <br>
-                              <strong>Rp 2.500</strong></a>
-                          </td>
-                          <td class="text-center">
-                            <div class="img thumbnail mb-2" style="background-image: url(assets/img/menu/nasi-rames-2.jpg);"></div>
-                            <a href="#"><strong>Nasi Rames</strong> <br>
-                              <strong>Rp 2.500</strong> </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="text-center">
-                            <div class="img thumbnail mb-2" style="background-image: url(assets/img/menu/nasi-dadar-2.jpg);"></div>
-                            <a href="#"><strong>Nasi Dadar</strong> <br>
-                              <strong>Rp 2.500</strong></a>
-                          </td>
-                          <td class="text-center">
-                            <div class="img thumbnail mb-2" style="background-image: url(assets/img/menu/nasi-ati-2.jpg);"></div>
-                            <a href="#"><strong>Nasi Ati</strong> <br>
-                              <strong>Rp 2.500</strong></a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+        <div class="row gy-4 posts-list">
+
+        
+         <?php 
+       include "koneksi.php";
+       $kode = $_GET['kode'];
+        $ret=mysqli_query($conn,"select * from tb_menuangkringan where kode='$kode'");
+        while($row=mysqli_fetch_array($ret))
+        {
+           $gambar = $row['gambar_masakan'];
+ 
+  ?>
+
+          
+          <div class="col-xl-3 col-md-4">
+            <article>
+
+
+              <div class="post-img ">
+                <div>
+               <img src="admin/gambar/<?php echo $gambar?>" alt="" class="img-fluid" style="">
+             </div>
               </div>
-            </div>
-    </section>
-    </div>
-    </div>
-    </section>
+             
+               
+
+              <p class="post-category"></p>
+              
+              <h2 class="title">
+               <!-- <a href="data_angkringan.php?kode=<?php echo $row['kode'] ?>"><?php echo $namaangkringan?></a>-->
+ 
+              </h2>
+              
+              
+              <div class="d-flex align-items-center">
+                <img src="" alt="" class="img thumbnail mb-5 style="background-image: url(assets/img/blog/admin.png)>
+                <div class="post-meta">
+                 <!-- <p class="post-author-list"><?php echo $row['menu'];?></p>-->
+                  <p class="post-author-list"><?php echo $row['judul'];?></p>
+                  <p class="post-meta">
+                  <p> Harga Rp.<?php echo $row['harga'];?></p>
+                  </p>
+                </div>
+  
+              </div>
+ 
+            </article>
+          </div><!-- End post list item -->
+ 
+            <?php
+           
+
+          }
+              
+                //echo $uang;
+              ?>
+        </div><!-- End blog posts list -->
+ 
+        <div class="blog-pagination">
+          <ul class="justify-content-center">
+            <li class="active"><a href="#">1</a></li>
+            
+          </ul>
+        </div><!-- End blog pagination -->
+
+      </div>
+    </section><!-- End Blog Section -->
 
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
